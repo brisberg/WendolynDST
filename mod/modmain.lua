@@ -17,6 +17,9 @@ Assets = {
 
 	Asset( "IMAGE", "images/map_icons/wdn_wendolyn.tex" ),
 	Asset( "ATLAS", "images/map_icons/wdn_wendolyn.xml" ),
+
+	Asset("SOUNDPACKAGE", "sound/wdn_wendolyn_speech.fev"),
+	Asset("SOUND", "sound/wdn_wendolyn_speech.fsb"),
 }
 
 local require = GLOBAL.require
@@ -33,6 +36,8 @@ GLOBAL.STRINGS.CHARACTERS.WDN_WENDOLYN = require "speech_wdn_wendolyn"
 -- Let the game know character is male, female, or robot
 table.insert(GLOBAL.CHARACTER_GENDERS.FEMALE, "wdn_wendolyn")
 
-
+RemapSoundEvent( "dontstarve/characters/wdn_wendolyn/death_voice", "wdn_wendolyn_speech/characters/wdn_wendolyn/death_voice" )
+RemapSoundEvent( "dontstarve/characters/wdn_wendolyn/hurt", "wdn_wendolyn_speech/characters/wdn_wendolyn/hurt" )
+RemapSoundEvent( "dontstarve/characters/wdn_wendolyn/talk_LP", "wdn_wendolyn_speech/characters/wdn_wendolyn/talk_LP" )
 AddMinimapAtlas("images/map_icons/wdn_wendolyn.xml")
 AddModCharacter("wdn_wendolyn")
