@@ -11,6 +11,7 @@
 <build_programmerreport>0</build_programmerreport>
 <build_applytemplate>0</build_applytemplate>
 <build_continue_on_error>0</build_continue_on_error>
+<currentbank>wdn_wendolyn_speech</currentbank>
 <currentlanguage>default</currentlanguage>
 <primarylanguage>default</primarylanguage>
 <language>default</language>
@@ -225,9 +226,9 @@
 <car_rpmsmooth>0.075</car_rpmsmooth>
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
-<volume_db>-5</volume_db>
-<pitch>-0.33333333333333331483</pitch>
-<pitch_units>Semitones</pitch_units>
+<volume_db>-7</volume_db>
+<pitch>1</pitch>
+<pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
 <pitch_randomization_units>Octaves</pitch_randomization_units>
 <volume_randomization>0</volume_randomization>
@@ -440,8 +441,8 @@
 <car_rpmsmooth>0.075</car_rpmsmooth>
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
-<volume_db>-5</volume_db>
-<pitch>0</pitch>
+<volume_db>-7</volume_db>
+<pitch>1</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
 <pitch_randomization_units>Octaves</pitch_randomization_units>
@@ -634,8 +635,8 @@
 <car_rpmsmooth>0.075</car_rpmsmooth>
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
-<volume_db>-4</volume_db>
-<pitch>0</pitch>
+<volume_db>-5</volume_db>
+<pitch>1</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
 <pitch_randomization_units>Octaves</pitch_randomization_units>
@@ -839,6 +840,7 @@
 <_IOS_quality>50</_IOS_quality>
 <_IOS_forcesoftware>1</_IOS_forcesoftware>
 <_IOS_maxstreams>10</_IOS_maxstreams>
+<_lang_default_filename_prefix></_lang_default_filename_prefix>
 <_lang_default_rebuild>0</_lang_default_rebuild>
 </default_soundbank_props>
 <soundbank>
@@ -1125,7 +1127,7 @@
 <_IOS_forcesoftware>1</_IOS_forcesoftware>
 <_IOS_maxstreams>10</_IOS_maxstreams>
 <_lang_default_filename_prefix></_lang_default_filename_prefix>
-<_lang_default_rebuild>0</_lang_default_rebuild>
+<_lang_default_rebuild>1</_lang_default_rebuild>
 </soundbank>
 <notes></notes>
 <currentplatform>PC</currentplatform>
