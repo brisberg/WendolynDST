@@ -365,7 +365,7 @@
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
 <volume_db>-7</volume_db>
-<pitch>1</pitch>
+<pitch>0</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
 <pitch_randomization_units>Octaves</pitch_randomization_units>
@@ -580,7 +580,7 @@
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
 <volume_db>-7</volume_db>
-<pitch>1</pitch>
+<pitch>0</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
 <pitch_randomization_units>Octaves</pitch_randomization_units>
@@ -774,7 +774,7 @@
 <car_loadsmooth>0.05</car_loadsmooth>
 <car_loadscale>6</car_loadscale>
 <volume_db>-5</volume_db>
-<pitch>1</pitch>
+<pitch>0</pitch>
 <pitch_units>Octaves</pitch_units>
 <pitch_randomization>0</pitch_randomization>
 <pitch_randomization_units>Octaves</pitch_randomization_units>
@@ -2305,7 +2305,7 @@
 <notes></notes>
 <currentplatform>PC</currentplatform>
 <_PC_encryptionkey></_PC_encryptionkey>
-<_PC_builddirectory>R:/DevProjects/WendolynDST/mod/sound</_PC_builddirectory>
+<_PC_builddirectory>../../mod/sound</_PC_builddirectory>
 <_PC_audiosourcedirectory></_PC_audiosourcedirectory>
 <_PC_prebuildcommands></_PC_prebuildcommands>
 <_PC_postbuildcommands></_PC_postbuildcommands>
