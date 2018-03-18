@@ -1,5 +1,6 @@
 PrefabFiles = {
 	"wdn_wendolyn",
+	"wdn_wendolyn_none",
 }
 
 Assets = {
@@ -18,10 +19,23 @@ Assets = {
 	Asset( "IMAGE", "images/map_icons/wdn_wendolyn.tex" ),
 	Asset( "ATLAS", "images/map_icons/wdn_wendolyn.xml" ),
 
+	Asset( "IMAGE", "images/avatars/avatar_wdn_wendolyn.tex" ),
+	Asset( "ATLAS", "images/avatars/avatar_wdn_wendolyn.xml" ),
+
+	Asset( "IMAGE", "images/avatars/avatar_ghost_wdn_wendolyn.tex" ),
+	Asset( "ATLAS", "images/avatars/avatar_ghost_wdn_wendolyn.xml" ),
+
+	Asset( "IMAGE", "images/avatars/self_inspect_wdn_wendolyn.tex" ),
+	Asset( "ATLAS", "images/avatars/self_inspect_wdn_wendolyn.xml" ),
+
 	Asset("SOUNDPACKAGE", "sound/wdn_wendolyn_speech.fev"),
 	Asset("SOUND", "sound/wdn_wendolyn_speech.fsb"),
 }
-
+if GLOBAL.TheSim:GetGameID() == "DS" then
+	modimport "scripts/lib/polyfill-ds.lua"
+elseif GLOBAL.TheSim:GetGameID() == "DST" then
+	modimport "scripts/lib/polyfill-dst.lua"
+end
 local require = GLOBAL.require
 
 -- The character select screen lines

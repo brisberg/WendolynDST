@@ -1,5 +1,4 @@
-
-local MakePlayerCharacter = require "prefabs/player_common"
+--local MakePlayerCharacter = require "prefabs/player_common"
 
 
 local assets = {
@@ -28,21 +27,21 @@ local assets = {
         Asset( "ANIM", "anim/player_one_man_band.zip" ),
         Asset( "ANIM", "anim/shadow_hands.zip" ),
         Asset( "SOUND", "sound/sfx.fsb" ),
-
-        Asset( "ANIM", "anim/wdn_wendolyn.zip" ),
 }
 local prefabs = {}
 local start_inv = {
 	-- Custom starting items
 }
 
-local fn = function(inst)
+local common_fn = function(inst)
+	-- Minimap icon
+	inst.MiniMapEntity:SetIcon( "wdn_wendolyn.tex" )
+end
 
+local master_fn = function(inst)
 	-- choose which sounds this character will play
 	inst.soundsname = "wdn_wendolyn"
 
-	-- Minimap icon
-	inst.MiniMapEntity:SetIcon( "wdn_wendolyn.tex" )
 
 	-- Stats
 	inst.components.health:SetMaxHealth(150)
@@ -53,4 +52,4 @@ local fn = function(inst)
   inst.components.combat.damagemultiplier = 1
 end
 
-return MakePlayerCharacter("wdn_wendolyn", prefabs, assets, fn, start_inv)
+return pf.MakePlayerCharacter("wdn_wendolyn", prefabs, assets, common_fn, master_fn, start_inv)
