@@ -12,7 +12,8 @@ local function onequip(inst, owner, symbol_override)
     owner.AnimState:OverrideSymbol("tail", name, "tail")
 
     owner.AnimState:Show("HAT")
-    owner.AnimState:Show("HAIR_HAT")
+    -- owner.AnimState:Show("HAIR_HAT")
+    owner.AnimState:Hide("HAIR_HAT")
     owner.AnimState:Hide("HAIR_NOHAT")
     owner.AnimState:Hide("HAIR")
 
@@ -33,7 +34,8 @@ local function onunequip(inst, owner)
     owner.AnimState:Hide("HAT")
     owner.AnimState:Hide("HAIR_HAT")
     owner.AnimState:Show("HAIR_NOHAT")
-    owner.AnimState:Show("HAIR")
+    -- owner.AnimState:Show("HAIR")
+    owner.AnimState:Hide("HAIR")
 
     if owner:HasTag("player") then
         owner.AnimState:Show("HEAD")
