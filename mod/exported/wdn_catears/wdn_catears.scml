@@ -6,6 +6,20 @@
         <file id="2" name="swap_hat/swap_hat-2.png" width="300" height="300" pivot_x="0.397351" pivot_y="0.254967"/>
         <file id="3" name="swap_hat/swap_hat-3.png" width="360" height="304" pivot_x="0.585485" pivot_y="0.159377"/>
     </folder>
+    <folder id="2" name="tail">
+        <file id="0" name="tail/tail-0.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="1" name="tail/tail-1.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="2" name="tail/tail-2.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="3" name="tail/tail-3.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="4" name="tail/tail-4.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="5" name="tail/tail-5.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="6" name="tail/tail-6.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="7" name="tail/tail-7.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="8" name="tail/tail-8.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="9" name="tail/tail-9.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="10" name="tail/tail-10.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+        <file id="11" name="tail/tail-11.png" width="250" height="100" pivot_x="0.628" pivot_y="0.5"/>
+    </folder>
     <entity id="0" name="wdn_catears">
         <animation id="0" name="anim" length="67">
             <mainline>

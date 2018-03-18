@@ -1,8 +1,10 @@
 local name = "wdn_catears"
 
-local assets = { Asset("ANIM", "anim/"..name..".zip") ,
+local assets = {
+    Asset("ANIM", "anim/"..name..".zip") ,
     Asset( "IMAGE", "images/inventoryimages/"..name..".tex" ),
-    Asset( "ATLAS", "images/inventoryimages/"..name..".xml" ),}
+    Asset( "ATLAS", "images/inventoryimages/"..name..".xml" ),
+}
 local prefabs = nil
 
 local function onequip(inst, owner, symbol_override)
@@ -11,7 +13,8 @@ local function onequip(inst, owner, symbol_override)
         owner:PushEvent("equipskinneditem", inst:GetSkinName())
         owner.AnimState:OverrideItemSkinSymbol("swap_hat", skin_build, symbol_override or "swap_hat", inst.GUID, name)
     else
-        owner.AnimState:OverrideSymbol("swap_hat", name, symbol_override or "swap_hat")
+        owner.AnimState:OverrideSymbol("swap_hat", name, "swap_hat")
+        owner.AnimState:OverrideSymbol("tail", name, "tail")
     end
     owner.AnimState:Show("HAT")
     owner.AnimState:Show("HAIR_HAT")
@@ -35,6 +38,7 @@ local function onunequip(inst, owner)
     end
 
     owner.AnimState:ClearOverrideSymbol("swap_hat")
+    owner.AnimState:ClearOverrideSymbol("tail")
     owner.AnimState:Hide("HAT")
     owner.AnimState:Hide("HAIR_HAT")
     owner.AnimState:Show("HAIR_NOHAT")
@@ -111,7 +115,7 @@ end
 
 
 
-STRINGS.NAMES.WDM_CATEARS = "Cute Cat Ears"
+STRINGS.NAMES.WDN_CATEARS = "Cute Cat Ears"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.WDN_CATEARS = "The animals will love me with these!"
 
 
