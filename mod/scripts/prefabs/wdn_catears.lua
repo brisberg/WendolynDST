@@ -8,14 +8,9 @@ local assets = {
 local prefabs = nil
 
 local function onequip(inst, owner, symbol_override)
-    local skin_build = inst:GetSkinBuild()
-    if skin_build ~= nil then
-        owner:PushEvent("equipskinneditem", inst:GetSkinName())
-        owner.AnimState:OverrideItemSkinSymbol("swap_hat", skin_build, symbol_override or "swap_hat", inst.GUID, name)
-    else
-        owner.AnimState:OverrideSymbol("swap_hat", name, "swap_hat")
-        owner.AnimState:OverrideSymbol("tail", name, "tail")
-    end
+    owner.AnimState:OverrideSymbol("swap_hat", name, "swap_hat")
+    owner.AnimState:OverrideSymbol("tail", name, "tail")
+
     owner.AnimState:Show("HAT")
     owner.AnimState:Show("HAIR_HAT")
     owner.AnimState:Hide("HAIR_NOHAT")
@@ -32,13 +27,9 @@ local function onequip(inst, owner, symbol_override)
 end
 
 local function onunequip(inst, owner)
-    local skin_build = inst:GetSkinBuild()
-    if skin_build ~= nil then
-        owner:PushEvent("unequipskinneditem", inst:GetSkinName())
-    end
-
     owner.AnimState:ClearOverrideSymbol("swap_hat")
     owner.AnimState:ClearOverrideSymbol("tail")
+
     owner.AnimState:Hide("HAT")
     owner.AnimState:Hide("HAIR_HAT")
     owner.AnimState:Show("HAIR_NOHAT")
@@ -77,7 +68,7 @@ end
 -- end
 
 local function fn()
-    local inst = CreateEntity()
+    local inst = pf.CreateEntity()
 
     inst.entity:AddTransform()
     inst.entity:AddAnimState()
@@ -108,7 +99,7 @@ local function fn()
     inst.components.equippable:SetOnEquip(onequip)
     inst.components.equippable:SetOnUnequip(onunequip)
 
-    MakeHauntableLaunch(inst)
+    pf.MakeHauntableLaunch(inst)
 
     return inst
 end
