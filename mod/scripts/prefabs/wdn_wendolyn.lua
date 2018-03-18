@@ -31,6 +31,7 @@ local assets = {
 local prefabs = {}
 local start_inv = {
 	-- Custom starting items
+  "wdn_catears",
 }
 
 local common_fn = function(inst)
@@ -41,7 +42,6 @@ end
 local master_fn = function(inst)
 	-- choose which sounds this character will play
 	inst.soundsname = "wdn_wendolyn"
-
 
 	-- Stats
 	inst.components.health:SetMaxHealth(150)

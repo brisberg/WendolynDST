@@ -6,7 +6,7 @@
         <file id="2" name="swap_hat/swap_hat-2.png" width="300" height="300" pivot_x="0.397351" pivot_y="0.254967"/>
         <file id="3" name="swap_hat/swap_hat-3.png" width="360" height="304" pivot_x="0.585485" pivot_y="0.159377"/>
     </folder>
-    <entity id="0" name="wtw_hat">
+    <entity id="0" name="wdn_catears">
         <animation id="0" name="anim" length="67">
             <mainline>
                 <key id="0">

@@ -1,6 +1,7 @@
 PrefabFiles = {
 	"wdn_wendolyn",
 	"wdn_wendolyn_none",
+	"wdn_catears",
 }
 
 Assets = {
