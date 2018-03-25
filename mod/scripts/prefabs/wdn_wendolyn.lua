@@ -34,6 +34,24 @@ local start_inv = {
   "wdn_catears",
 }
 
+local function IsValidVictim(victim)
+    return victim ~= nil
+        and victim:HasTag("rabbit") or
+            victim:HasTag("beefalo") or
+            (victim:HasTag("pig") and not victim:HasTag("werepig")) or
+            victim:HasTag("mossling") or
+            victim:HasTag("butterfly")
+end
+
+local function onkilled(inst, data)
+    local victim = data.victim
+    if IsValidVictim(victim) then
+        -- local delta = victim.components.combat.defaultdamage * 0.25
+        -- inst.components.health:DoDelta(delta, false, "battleborn")
+        inst.components.sanity:DoDelta(-10)
+    end
+end
+
 local common_fn = function(inst)
 	-- Minimap icon
 	inst.MiniMapEntity:SetIcon( "wdn_wendolyn.tex" )
@@ -50,6 +68,9 @@ local master_fn = function(inst)
 
 	-- Damage multiplier (optional)
   inst.components.combat.damagemultiplier = 1
+
+
+  inst:ListenForEvent("killed", onkilled)
 end
 
 return pf.MakePlayerCharacter("wdn_wendolyn", prefabs, assets, common_fn, master_fn, start_inv)
