@@ -56,3 +56,17 @@ RemapSoundEvent( "dontstarve/characters/wdn_wendolyn/hurt", "wdn_wendolyn_speech
 RemapSoundEvent( "dontstarve/characters/wdn_wendolyn/talk_LP", "wdn_wendolyn_speech/characters/wdn_wendolyn/talk_LP" )
 AddMinimapAtlas("images/map_icons/wdn_wendolyn.xml")
 AddModCharacter("wdn_wendolyn")
+
+local Ingredient = GLOBAL.Ingredient
+AddRecipe(
+	"wdn_catears",
+	{
+		Ingredient("coontail", 1),
+		Ingredient("silk", 4)
+	},
+	GLOBAL.RECIPETABS.DRESS,
+	GLOBAL.TECH.NONE,
+	nil, nil, nil, nil, "wdn_catears_builder",
+	"images/inventoryimages/wdn_catears.xml",
+	"wdn_catears.tex")
+GLOBAL.STRINGS.RECIPE_DESC.WDN_CATEARS = "All the cute creatures will love me in these."

@@ -69,6 +69,7 @@ local master_fn = function(inst)
 	-- Damage multiplier (optional)
   inst.components.combat.damagemultiplier = 1
 
+  inst:AddTag("wdn_catears_builder")
 
   inst:ListenForEvent("killed", onkilled)
 end
